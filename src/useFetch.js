@@ -6,8 +6,10 @@ const useFetch = (url) => {
     const [isPending, setIsPending] = useState(true);    
     const [error, setError] = useState(null);
     
+    console.log(url);
 
     useEffect(() => {
+        console.log(url);
         fetch(url)
             .then(res => {
                 if(!res.ok){
